@@ -1,14 +1,11 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/
 export SPARK_MASTER_HOST=localhost
 export SPARK_HOME=/usr/local/installs/spark/
-export GOPATH=$HOME/go
-#export GOBIN=/usr/local/installs/go/bin/
-export GO_HOME=$HOME/go
-#export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/dev/go
+export GO_HOME=$HOME/dev/go
 
 export EDITOR=vim
 export NVM_DIR="$HOME/.nvm"
@@ -17,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 export ANT_HOME=/usr/local/installs/apache-ant
 export GRADLE_HOME=/usr/local/installs/gradle
 export PYTHON=/usr/local/bin/python
-export SCALA_HOME=/usr/local/Cellar/scala
+export SCALA_HOME=/usr/local/opt/scala@2.12
 export PUPPET_ROOT=/usr/bin
 export PROD_MFA_DEVICE=arn:aws:iam::249536929440:mfa/jim.baugh-prd
 
@@ -31,7 +28,7 @@ parse_git_branch() {
 
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h (\[\033[33;1m\]\$(date '+%m/%d %H:%M %S')):\n\w\[\033[m\]\[\033[33m\]\$(parse_git_branch)\n\[\033[0m\]\$ "
 
-PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$GRADLE_HOME/bin:$SCALA_HOME/bin:/usr/local/installs/spark/bin:/usr/local/installs:$PATH
+PATH=/usr/local/opt/bison/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$GRADLE_HOME/bin:$SCALA_HOME/bin:/usr/local/installs/spark/bin:/usr/local/installs:$GOPATH/bin:$PATH
 
 set -o vi
 
