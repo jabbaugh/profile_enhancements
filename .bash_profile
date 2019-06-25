@@ -20,7 +20,6 @@ export PROD_MFA_DEVICE=arn:aws:iam::249536929440:mfa/jim.baugh-prd
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'

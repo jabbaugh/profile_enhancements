@@ -1,3 +1,3 @@
-ln -s /Users/$(whoami)/dev/gitrepos/profile_enhancements/.vimrc ~/.vimrc
-ln -s /Users/$(whoami)/dev/gitrepos/profile_enhancements/.bash_profile ~/.bash_profile
-ln -s /Users/$(whoami)/dev/gitrepos/profile_enhancements/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/.vimrc ~/.vimrc
+ln -s $(pwd)/.bash_profile ~/.bash_profile
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
