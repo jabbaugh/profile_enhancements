@@ -1,0 +1,2 @@
+grep -rl oracledc.pagerduty.com . | xargs sed -i '' -e 's/oracledc.pagerduty.com/oracle.pagerduty.com/g'
+

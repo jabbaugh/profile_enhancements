@@ -1,0 +1,4 @@
+docke  containe ls
+docker exec -it <container name> /bin/bash
+docker container stats <container name>
+docker container inspect <container name>

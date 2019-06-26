@@ -1,0 +1,21 @@
+# Deal with Kafka Consumer Groups
+
+## List all groups
+kafka-consumer-groups --bootstrap-server 10.100.40.212:9092 --list
+
+## List a specific group
+kafka-consumer-groups --bootstrap-server 10.100.40.212:9092 --group prod_abacus --describe
+
+## Reset the offsets to-latest
+kafka-consumer-groups --bootstrap-server 10.100.40.212:9092 --group prod_abacus --topic fulfillment_user_dlx_test --reset-offsets --to-latest --execute
+
+## Consume
+kafka-console-consumer --bootstrap-server 10.100.40.212:9092 --topic universe --from-beginning --max-messages 1
+
+# Topics
+
+kafka-topics --describe --zookeeper 10.100.41.34:2181 --topic universe_experimental
+
+kafka-topics --list --zookeeper 10.100.41.34:2181
+
+kafka-topics --list --zookeeper 10.100.41.34:2181 --topic universe_experimental --alter --config retention.ms=86400000
