@@ -1,11 +1,16 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home/
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home/
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/
+export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home/
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home/
 export SPARK_MASTER_HOST=localhost
 export SPARK_HOME=/usr/local/installs/spark/
 export GOPATH=$HOME/dev/go
 export GO_HOME=$HOME/dev/go
+export GOPRIVATE="gitlab.oracledatacloud.com"
 
 export EDITOR=vim
 export NVM_DIR="$HOME/.nvm"
@@ -27,7 +32,7 @@ parse_git_branch() {
 
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h (\[\033[33;1m\]\$(date '+%m/%d %H:%M %S')):\n\w\[\033[m\]\[\033[33m\]\$(parse_git_branch)\n\[\033[0m\]\$ "
 
-PATH=/usr/local/opt/bison/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$GRADLE_HOME/bin:$SCALA_HOME/bin:/usr/local/installs/spark/bin:/usr/local/installs:$GOPATH/bin:$PATH
+PATH=/usr/local/installs/protoc-3.3.0/bin:/usr/local/opt/bison/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$GRADLE_HOME/bin:$SCALA_HOME/bin:/usr/local/installs/spark/bin:/usr/local/installs:$GOPATH/bin:/Users/jbbaugh/dev/go/src/github.com/eneco/landscaper/build:/Users/jbbaugh/Library/Application\ Support/Coursier/bin:$PATH
 
 set -o vi
 
@@ -35,10 +40,24 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# PYEnv
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
 # Cassandra
 if [ -d "/usr/local/installs/cassandra" ]; then
   export PATH="$PATH:/usr/local/installs/cassandra/bin"
 fi
+
+alias k8s-tc="kubectl config use-context arn:aws:eks:us-east-1:249536929440:cluster/top-cat"
+alias k8s-cc="kubectl config use-context arn:aws:eks:us-east-1:249536929440:cluster/clutch-cargo"
+alias k8s-rr="kubectl config use-context arn:aws:eks:us-east-1:249536929440:cluster/ruff-and-reddy"
+alias k8s-hw="kubectl config use-context hokey-wolf"
 
 awsenv() {
     export PROD_ACCESS_KEY=$(aws configure get aws_access_key_id)
@@ -141,3 +160,5 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+export PATH="$HOME/.cargo/bin:$PATH"

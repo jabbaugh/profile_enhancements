@@ -1,0 +1,15 @@
+kubectl -n pulsar port-forward friedrich-karl-arnold-schwassmann-pulsar-grafana-d7cf965b8zk4m5 3000
+
+# Remove PersistanceVolume from cluster
+kubectl get pv | tail -n+2 | awk '{print $1}' | xargs -I{} kubectl patch pv {} -p '{"metadata":{"finalizers": null}}'
+
+# Shell into pod
+kubectl exec -it onramp-satisfier-prod-755759dbfd-9r8f4 -n prod /bin/bash
+
+#HPA
+kubectl get hpa -n prod -o wide
+kubectl describe hpa -n prod bivrost-autoscaler
+
+# Reach 
+Get latest context
+https://dex.us-phx-a.k8s.oracledatacloud.com/start

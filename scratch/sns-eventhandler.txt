@@ -1,0 +1,2 @@
+aws sns publish --topic-arn arn:aws:sns:us-east-1:249536929440:campaign-hub-verification-msgs-stage --subject Test --message '{"is_mutually_exclusive":false,"source_audience_id":3802518,"source_audience_version":110,"content_type":1,"full_path":"s3://dlx-prod-core-shared/prod/data/audience/id=3802518/version=110/","load_type":"REFRESH","bundle":0,"diff_path":"s3://dlx-prod-core-shared/prod/data/audience/id=3802518/currVer=110.prevVer=109/","diff_count":517}'
+

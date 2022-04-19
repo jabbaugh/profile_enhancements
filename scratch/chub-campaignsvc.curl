@@ -1,0 +1,5 @@
+curl http://odc-campaign-svc-prd.valkyrie.net:80/v3/partnerAudiences/sourceaudience/3802517
+
+curl https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation/status?filter=deliveryAudienceId==5465725
+
+https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation/status?filter=status==ACTIVATED;groupingType==bk_campaign

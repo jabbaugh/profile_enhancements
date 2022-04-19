@@ -1,0 +1,3 @@
+Is the audienceId active? Is the groupingId populated?
+https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation/status?filter=deliveryAudienceId==5451539
+

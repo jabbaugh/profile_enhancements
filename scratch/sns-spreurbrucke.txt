@@ -1,0 +1,2 @@
+aws sns publish --topic-arn arn:aws:sns:us-east-1:249536929440:UCMAuditExtractFirehose --subject Test --message '{"name": "AuditServiceExportNotification", "job-instance-id": "855018", "provider-name": "FulfillmentOptOutSnapchat-6105ce76-f11b-439f-a40c-c86f95a4d2d7", "job-status": "SUCCESS", "step-status": "SUCCESS", "export-path": "s3://p3-fulfillment/audit-n-extract/prod/snapchat/2021-05-12/", "guid": "6105ce76-f11b-439f-a40c-c86f95a4d2d7", "dataset-name": "FulfillmentOptOutSnapchat", "export-name": "FulfillmentOptOutSnapchat" }'
+

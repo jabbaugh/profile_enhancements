@@ -1,1 +1,5 @@
+# Grab data from s3
 aws s3api get-object --bucket p3-bk-fulfillment --key BlueKai-Custom-Old-BKID/66374/output/batch-fulfillment/concat-result/Datalogix_bkuuid_customs_old_20171114_i --range bytes=0-1000000 /tmp/test
+
+# Send SQS Message:
+aws sns publish --topic-arn "arn:aws:sns:us-east-1:249536929440:campaign-hub-verification-msgs-prod" --message '{json goes here}'
