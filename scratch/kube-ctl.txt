@@ -13,3 +13,7 @@ kubectl describe hpa -n prod bivrost-autoscaler
 # Reach 
 Get latest context
 https://dex.us-phx-a.k8s.oracledatacloud.com/start
+
+
+# Copy Secret
+kubectl get secret fulfillment-cert-vault-secret --namespace=fulfillment -o yaml| sed 's/namespace: .*/namespace: fulfillment-pulsar/' | kubectl apply -f -

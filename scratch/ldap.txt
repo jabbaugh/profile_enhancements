@@ -1,0 +1,2 @@
+ldapsearch -x -LLL -o ldif-wrap=no -h opps-dc08.oracledatacloud.com -s sub -b "DC=oracledatacloud,DC=com" -D jim.baugh@oracledatacloud.com -W "(CN=Jim Baugh)"
+ldapsearch -x -LLL -o ldif-wrap=no -h opps-dc08.oracledatacloud.com -s sub -b "DC=oracledatacloud,DC=com" -D jim.baugh@oracledatacloud.com -W "(cn=tech_fulfillment)"

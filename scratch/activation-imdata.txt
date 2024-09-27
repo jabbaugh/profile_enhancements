@@ -1,0 +1,8 @@
+Get PS Doc
+https://imdata-api-svc-prod.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/partnerMapping?pageNo=0&pageSize=10&sortBy=id&sortDirection=ASC&filter=audienceId%3D%3D6923786
+
+Get Activation Record
+https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/fulfillment?filter=deliveryAudienceId%3D%3D6923786&page=0&size=100
+
+Verify PSDocId points to the right IMData doc
+https://imdata-api-svc-prod.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/partnerMapping/bbfb3657-74b4-45f7-b606-27e752bed881

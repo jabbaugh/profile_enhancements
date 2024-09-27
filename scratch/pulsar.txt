@@ -1,2 +1,6 @@
 bin/pulsar-admin topics create-partitioned-topic --partitions 5 persistent://beta/pixel/pixel_user_delivery_test
 bin/pulsar-admin topics create-subscription -s organicer persistent://beta/pixel/pixel_user_delivery_test
+
+bin/pulsar-admin topics partitioned-stats   persistent://beta/pixel/pixel_user_delivery_test
+
+bin/pulsar-admin topics list-partitioned-topics beta/voltron-general | wc -l

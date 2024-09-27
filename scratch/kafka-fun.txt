@@ -19,3 +19,13 @@ kafka-topics --describe --zookeeper 10.100.41.34:2181 --topic universe_experimen
 kafka-topics --list --zookeeper 10.100.41.34:2181
 
 kafka-topics --list --zookeeper 10.100.41.34:2181 --topic universe_experimental --alter --config retention.ms=86400000
+
+
+### On-Call
+Full PVC
+
+kubectl -n kafka port-forward pod/zookeeper-2 2181
+kafka-topics.sh --zookeeper localhost:2181 --unavailable-partitions --describe
+11:54
+kafka-topics.sh --zookeeper localhost:2181 --under-replicated-partitions --describe:
+- 

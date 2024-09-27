@@ -1,0 +1,11 @@
+Convert categoryId to audienceId in IMData
+https://imdata-api-svc-prod.prd-use1-eks-b.k8s.oracledatacloud.com/swagger-ui/index.html#/04%20partner%20mapping/getFilteredPagedMappings
+
+partnerAudienceId==2091078
+
+Check logs for category found
+
+Go to audience service and take root audience Id
+
+https://odc-audience-svc-prd.prd-use1-eks-b.k8s.oracledatacloud.com/api/v4/audiences/6563108
+

@@ -3,3 +3,16 @@ curl http://odc-campaign-svc-prd.valkyrie.net:80/v3/partnerAudiences/sourceaudie
 curl https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation/status?filter=deliveryAudienceId==5465725
 
 https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation/status?filter=status==ACTIVATED;groupingType==bk_campaign
+
+https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation?filter=deliveryAudienceId%3D%3D6024054&page=0&size=100
+
+http://odc-audience-svc-prd.valkyrie.net/api/v4/audiences/6024054
+
+// PS Record
+Check if BK audience is configured to go.
+
+curl https://activation-status-svc.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/activation/status\?filter\=deliveryAudienceId\=\=6040664 | jq
+
+curl -X 'GET' \
+  'https://imdata-api-svc-prod.prd-use1-eks-b.k8s.oracledatacloud.com/api/v1/partnerMapping/PROD_585_6040664' \
+  -H 'accept: application/json'
