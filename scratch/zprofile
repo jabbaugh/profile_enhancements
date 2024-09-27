@@ -1,0 +1,33 @@
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export GOPATH=~/dev/go
+export ORACLE_HOME=/opt/local/installs/oracle-instantlient-basic/instantclient_19_8/
+export TNS_ADMIN=~/dev/OCI/configs_scripts
+export ORACLE_PATH=~/dev/OCI/configs_scripts/sql
+export PATH=$PATH:$GOPATH/bin/:$ORACLE_HOME
+export GO111MODULE=on
+export GOSUMDB=off
+export GOPROXY=https://bin.oracledatacloud.com/artifactory/api/go/go,direct
+export GOPRIVATE=gitlab.oracledatacloud.com
+export GOARCH=amd64
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+export EDITOR='vim'
+
+
+alias 'git co'="git checkout"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home/
+
+PATH=/opt/homebrew/Cellar/kafka/3.2.0/bin:/opt/local/installs:$PATH
+
+# Enable vi mode
+bindkey -v
+
+alias k8s-minikube="kubectl config use-context minikube"
+alias k8s-oci-stage="kubectl config use-context staging-18-odc-iad"
+alias k8s-oci-prod="kubectl config use-context production-19-odc-iad"
+alias k8s-oci-moat-prod="kubectl config use-context production-4-odc-iad"
+
